@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Skyfont;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:Skyfont;
+    src: url(./font/Skyscapers.ttf);
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+.main{
+    width:100%;
+}
+.hero{
+    width: 100%;
+    color: #fff;
+    height: 100vh;
+    background-color: black;
+}
+.nav{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    padding:20px 40px;
+}
+.nav a{
+    text-decoration: none;
+    font-size:18px;
+    color: #fff;
+}
+.heading{
+    margin-top:90px;
+}
+.heading h1{
+    margin-left:30px;
+    font-size:10vw;
+    opacity: .6;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.heading #secondh1{
+    margin-left:230px;
+}
+.blocktext{
+    width:fit-content;
+}
+.blocktext h5{
+text-align: right;
+text-transform: uppercase;
+font-size:17px;
+}
+.Mini-hedaing{
+    margin-top: 100px;
+    padding:50px;
+}
+.Mini-hedaing h5{
+    margin-top:.5VW;
+    text-align: right;
+    text-transform: uppercase;
+    font-size:1vw
+}
+.hero-footer{
+    width:100%;
+    padding:0 2vw;
+    position: absolute;
+    bottom:3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-footer a{
+    color:#fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.hero-footer .iconset{
+    display: flex;
+    gap:5px;
+}
+.hero-footer .circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    background-color:#888;
+
+}
+
