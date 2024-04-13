@@ -37,8 +37,8 @@ function smallCircal(){
         // ====================================
         // console.log(xdiff , ydiff);
 
-        xscale = gsap.utils.clamp(.8, 1.2, dets.clientX - xprev);
-        yscale = gasp.utils.clamp(.8, 1.2, dets.clientY - yprev);
+        // xscale = gsap.utils.clamp(.8, 1.2, dets.clientX - xprev);
+        // yscale = gasp.utils.clamp(.8, 1.2, dets.clientY - yprev);
         xprev = dets.clientX;
         yprev = dets.clientY;
         
@@ -97,9 +97,9 @@ document.querySelectorAll(".elem").forEach(function (elem) {
         gsap.to(elem.querySelector("img"), {
             opacity: 1,
             ease: Power3,
-            top: diff,
+            // top: diff,
             left: dets.clientX,
-            rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
+            // rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
         });
     });
 });
