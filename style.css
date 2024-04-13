@@ -12,10 +12,28 @@ html , body{
     height: 100%;
     width: 100%;
 }
+.mini-circle{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    width:10px;
+    height: 10px;
+    position: absolute;
+    z-index: 99999;
+    border-radius:50%;
+    background-color: #fff;
+}
+.bounding{
+    width: fit-content;
+    overflow: hidden;
+}
+.bounding .bounding-elem{
+    transform: translateY(100%);
+}
 .main{
     width:100%;
+    background-color: #000;
 }
 .hero{
+    position: relative;
     width: 100%;
     color: #fff;
     height: 100vh;
@@ -49,6 +67,9 @@ html , body{
 }
 .blocktext{
     width:fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 .blocktext h5{
 text-align: right;
@@ -56,12 +77,15 @@ text-transform: uppercase;
 font-size:17px;
 }
 .Mini-hedaing{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     margin-top: 100px;
     padding:50px;
 }
 .Mini-hedaing h5{
     margin-top:.5VW;
-    text-align: right;
+    /* text-align: right; */
     text-transform: uppercase;
     font-size:1vw
 }
