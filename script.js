@@ -49,6 +49,8 @@ function smallCircal(){
 }
 
 //======Mouse-Follower-Function========== 
+
+// isko gsap se move krane se lag nhi hoga gsap.to use kijiye
 function MouseFollower(xscale,yscale){
     window.addEventListener("mousemove", function(dets){
         // console.log(dets);
@@ -99,7 +101,7 @@ document.querySelectorAll(".elem").forEach(function (elem) {
             ease: Power3,
             // top: diff,
             left: dets.clientX,
-            // rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
+            rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
         });
     });
 });
