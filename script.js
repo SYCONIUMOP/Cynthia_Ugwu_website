@@ -19,7 +19,7 @@ function firstpageAnim(){
         ease: Expo.easeInOut,
         duration: 2,
         delay: -1,
-        // Stagger: .2,
+        Stagger: .2,
     })
 }
 //======Follower-Circle-Function========== 
@@ -39,10 +39,10 @@ function smallCircal(){
 
         xscale = gsap.utils.clamp(.8, 1.2, dets.clientX - xprev);
         yscale = gasp.utils.clamp(.8, 1.2, dets.clientY - yprev);
+
         xprev = dets.clientX;
         yprev = dets.clientY;
         
-
         MouseFollower(xscale, yscale);
 
     });
@@ -60,11 +60,11 @@ MouseFollower();
 firstpageAnim(); 
 
 
-//==============================================================================================================================================================
-//  Teeno element ko sleect karo uska baad teeno par eek mousemove lagao jab mousemove ho to ye pata karo ki mouuse kaha par hai jiska matlab hai
-//  mouse ki x and y position paata karo ab mouse ki x y position ka badle us image ko show karo and us image ko move karo move karte  waqt rotate karo, 
+//=======================================================================================================================================================
+//  Teeno element ko sleect karo uska baad teeno par eek mousemove lagao jab mousemove ho to ye pata karo ki mouuse kaha par hai jiska matlab hai Mouse 
+// ki x and y position paata karo ab mouse ki x y position ka badle us image ko show karo and us image ko move karo move karte  waqt rotate karo, 
 // and jaysa jaysa  mouse tez chale waise waise rotation bhi tez ho jayaa 
-//==========================================================================
+//======================================================================================
 
 
 // document.querySelectorAll(".elem").forEach(function (elem) {
@@ -97,7 +97,7 @@ document.querySelectorAll(".elem").forEach(function (elem) {
         gsap.to(elem.querySelector("img"), {
             opacity: 1,
             ease: Power3,
-            top: diff,
+            // top: diff,
             left: dets.clientX,
             rotate: gsap.utils.clamp(-20, 20, diffrot * 0.5),
         });

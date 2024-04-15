@@ -146,7 +146,6 @@ border-bottom: 1px solid gray;
 }
 .elem img{
     /* opacity: 1; */
-    display: none;
     width:30%;
     height:20%;
     z-index: 999;
