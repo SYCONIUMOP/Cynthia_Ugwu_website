@@ -19,7 +19,7 @@ function firstpageAnim(){
         ease: Expo.easeInOut,
         duration: 2,
         delay: -1,
-        Stagger: .2,
+        Stagger:.2,
     })
 }
 //======Follower-Circle-Function========== 
@@ -55,8 +55,20 @@ function MouseFollower(xscale,yscale){
         this.document.querySelector(".mini-circle").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`; //scale(${xscale}, ${yscale}) not working 
     })
 }
+
+var temp;
+window.addEventListener("mousemove", (dets) => {
+    temp = dets.clientY;
+    gsap.to(".mini-circle", {
+        y: dets.pageY,
+        x: dets.pageX,
+        translate: '-50% -50%',
+        rotate: `${(dets.pageY + dets.pageX)/5}deg`
+    });
+});
+
 smallCircal()
-MouseFollower();
+// MouseFollower();
 firstpageAnim(); 
 
 
@@ -82,13 +94,14 @@ document.querySelectorAll(".elem").forEach(function (elem) {
     var rotate = 0;
     var diffrot = 0;
 
-    elem.addEventListener("mouseleave", function (dets) {
+    elem.addEventListener("mouseleave", function () {
         gsap.to(elem.querySelector("img"), {
             opacity: 0,
             ease: Power3,
             duration: 0.5,
         });
     });
+    
     elem.addEventListener("mousemove", function (dets) {
         console.log(elem.querySelector("img"))
         var diff = dets.clientY - elem.getBoundingClientRect().top;
